@@ -4,7 +4,7 @@ import { withFormik, Form, Field } from "formik";
 import * as Yup from "yup";
 import { postData } from "../actions";
 
-function SmurfFrm({ values, errors, touched }) {
+function SmurfFrm({ values, errors, touched, postData }) {
   return (
     <div className="form-card">
       <h1>Add a Smurf</h1>
@@ -21,7 +21,7 @@ function SmurfFrm({ values, errors, touched }) {
           {touched.height && errors.height && <p>{errors.height}</p>}
           <Field type="height" name="height" placeholder="Height" />
         </div>
-        <button className="ui button" type="submit">
+        <button className="ui button" onClick={postData}>
           Submit
         </button>
         <button className="ui button" type="reset">

@@ -17,7 +17,7 @@ const SmurfList = props => {
           'Get Smurf Data'
         )}
       </button>
-      {props.smurfs &&
+      {
         props.smurfs.map(res => <Smurf key={res.name} smurf={res} />)}
     </>
   );

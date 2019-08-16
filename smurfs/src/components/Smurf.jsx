@@ -5,7 +5,6 @@ const Smurf = props => {
     <div className='smurf-data'>
       <h2>This smurf's name is {props.smurf.name}</h2>
       <h3>{props.smurf.name} is {props.smurf.age} "smurf years old" and is {props.smurf.height} tall.</h3>
-      <h1>Remember smurfs aren't blue they're green so adjust your tv...</h1>
       </div>
   );
 };
