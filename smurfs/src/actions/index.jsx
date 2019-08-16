@@ -8,10 +8,11 @@ export const getData = () => {
   return dispatch => {
     dispatch({ type: FETCH_DATA_START });
     axios
-      .get('')
+      .get('http://localhost:3333/smurfs')
       .then(res => {
+      console.log("TCL: getData -> res", res)
         // res.data.data
-        dispatch({ type: FETCH_DATA_SUCCESS, payload: res.data.data });
+        dispatch({ type: FETCH_DATA_SUCCESS, payload: res.data });
       })
       .catch(err => {
         dispatch({ type: FETCH_DATA_FAILURE, payload: err.response });

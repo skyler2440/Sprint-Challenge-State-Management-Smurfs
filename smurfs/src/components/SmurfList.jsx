@@ -9,7 +9,7 @@ import Smurf from './Smurf';
 const SmurfList = props => {
   return (
     <>
-      <h1>Title Here</h1>
+      <h1>Check out all these smurfs...</h1>
       <button onClick={props.getData}>
         {props.isLoading ? (
           <Loader type="TailSpin" color="#00BFFF" height={15} width={100} />

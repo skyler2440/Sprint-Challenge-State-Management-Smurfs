@@ -2,10 +2,11 @@ import React from 'react';
 
 const Smurf = props => {
   return (
-    <div>
-      <h4>{props.smurf.name}</h4>
-      <img src={props.smurf.url} alt={props.smurf.name} />
-    </div>
+    <div className='smurf-data'>
+      <h2>This smurf's name is {props.smurf.name}</h2>
+      <h3>{props.smurf.name} is {props.smurf.age} "smurf years old" and is {props.smurf.height} tall.</h3>
+      <h1>Remember smurfs aren't blue they're green so adjust your tv...</h1>
+      </div>
   );
 };
 
