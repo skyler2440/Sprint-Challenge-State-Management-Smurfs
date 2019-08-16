@@ -19,7 +19,7 @@ console.log("TCL: props", props)
         )}
       </button>
       {props.smurfs &&
-        props.smurfs.map(cam => <Smurf key={cam.name} smurf={cam} />)}
+        props.smurfs.map(res => <Smurf key={res.name} smurf={res} />)}
     </>
   );
 };
