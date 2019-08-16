@@ -7,6 +7,7 @@ import { getData } from '../actions';
 import Smurf from './Smurf';
 
 const SmurfList = props => {
+console.log("TCL: props", props)
   return (
     <>
       <h1>Check out all these smurfs...</h1>
@@ -17,13 +18,14 @@ const SmurfList = props => {
           'Get Smurf Data'
         )}
       </button>
-      {
-        props.smurfs.map(res => <Smurf key={res.name} smurf={res} />)}
+      {props.smurfs &&
+        props.smurfs.map(cam => <Smurf key={cam.name} smurf={cam} />)}
     </>
   );
 };
 
 const mapStateToProps = state => {
+console.log("TCL: state", state)
   return {
     isLoading: state.isLoading,
     smurfs: state.smurfs

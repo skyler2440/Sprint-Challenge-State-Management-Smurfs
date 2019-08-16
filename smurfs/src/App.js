@@ -7,7 +7,7 @@ class App extends Component {
     return (
       <div className="App">
         <SmurfForm />
-        <SmurfList />
+        <SmurfList/>
       </div>
     );
   }
