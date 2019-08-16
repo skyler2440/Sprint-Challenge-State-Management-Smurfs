@@ -2,6 +2,7 @@ import React from "react";
 import { connect } from "react-redux";
 import { withFormik, Form, Field } from "formik";
 import * as Yup from "yup";
+import { postData } from "../actions";
 
 function SmurfFrm({ values, errors, touched }) {
   return (
@@ -45,10 +46,12 @@ const SmurfForm = withFormik({
     height: Yup.string().required("is required")
   }),
 
-  handleSubmit(values, formikBag) {}
+  handleSubmit(values, formikBag) {
+      formikBag.props.postData(values)
+  }
 })(SmurfFrm);
 
 export default connect(
   null,
-  {}
+  {postData}
 )(SmurfForm);
