@@ -39,7 +39,7 @@ import {
               ...state,
               isLoading: true,
               error: null,
-              smurfs: {},
+              smurfs: [],
               isSuccess: false,
           }
         case POST_DATA_SUCCESS:
@@ -47,7 +47,7 @@ import {
             ...state,
             isLoading: false,
             errors: null,
-            smurfs: {},
+            smurfs: [],
             isSuccess: true
           }
         case POST_DATA_FAILURE:
@@ -55,7 +55,7 @@ import {
               ...state,
               isLoading: false,
               errors: action.payload,
-              smurfs: {},
+              smurfs: [],
               isSuccess: false
           }
       default:
